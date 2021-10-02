@@ -1,87 +1,198 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>jQuery UI Controlgroup - Default Functionality</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <style>
-    .ui-controlgroup-vertical {
-      width: 150px;
-    }
-    .ui-controlgroup.ui-controlgroup-vertical > button.ui-button,
-    .ui-controlgroup.ui-controlgroup-vertical > .ui-controlgroup-label {
-      text-align: center;
-    }
-    #car-type-button {
-      width: 120px;
-    }
-    .ui-controlgroup-horizontal .ui-spinner-input {
-      width: 20px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mercedes-Benz Configurator</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( ".controlgroup" ).controlgroup()
-    $( ".controlgroup-vertical" ).controlgroup({
-      "direction": "vertical"
+    <script>
+        $(function(){
+          $('#slider4').slider({
+            max:10,
+    animate:"slow",
+        range:"min",
+        value:1,
+        slide: function(event, ui){
+            $("#result2.4").text(ui.value);
+        }
     });
-  } );
-  </script>
+    $("#result2.4").text($("#slider4").slider("value"));
+
+        });
+    </script>
+
+    <script>
+        $(function(){
+          $('#slider1').slider({
+            max:10,
+    animate:"slow",
+        range:"min",
+        value:1,
+        slide: function(event, ui){
+            $("#result1").text(ui.value);
+        }
+    });
+    $("#result1").text($("#slider1").slider("value"));
+
+        });
+    </script>
+
+    <script>
+        $(function(){
+          $('#slider2').slider({
+            max:10,
+    animate:"slow",
+        range:"min",
+        value:1,
+        slide: function(event, ui){
+            $("#result2").text(ui.value);
+        }
+    });
+    $("#result2").text($("#slider2").slider("value"));
+
+        });
+    </script>
+
+    <script>
+        $(function(){
+          $('#slider3').slider({
+            max:10,
+    animate:"slow",
+        range:"min",
+        value:1,
+        slide: function(event, ui){
+            $("#result3").text(ui.value);
+        }
+    });
+    $("#result3").text($("#slider3").slider("value"));
+
+        });
+    </script>
 </head>
 <body>
-<div class="widget">
-  <h1>Controlgroup</h1>
-  <fieldset>
-    <legend>Rental Car</legend>
-    <div class="controlgroup">
-      <select id="car-type">
-        <option>Compact car</option>
-        <option>Midsize car</option>
-        <option>Full size car</option>
-        <option>SUV</option>
-        <option>Luxury</option>
-        <option>Truck</option>
-        <option>Van</option>
-      </select>
-      <label for="transmission-standard">Standard</label>
-      <input type="radio" name="transmission" id="transmission-standard">
-      <label for="transmission-automatic">Automatic</label>
-      <input type="radio" name="transmission" id="transmission-automatic">
-      <label for="insurance">Insurance</label>
-      <input type="checkbox" name="insurance" id="insurance">
-      <label for="horizontal-spinner" class="ui-controlgroup-label"># of cars</label>
-      <input id="horizontal-spinner" class="ui-spinner-input">
-      <button>Book Now!</button>
-    </div>
-  </fieldset>
-  <br>
-  <fieldset>
-    <legend>Rental Car</legend>
-    <div class="controlgroup-vertical">
-      <select>
-        <option>Compact car</option>
-        <option>Midsize car</option>
-        <option>Full size car</option>
-        <option>SUV</option>
-        <option>Luxury</option>
-        <option>Truck</option>
-        <option>Van</option>
-      </select>
-      <label for="transmission-standard-v">Standard</label>
-      <input type="radio" name="transmission-v" id="transmission-standard-v">
-      <label for="transmission-automatic-v">Automatic</label>
-      <input type="radio" name="transmission-v" id="transmission-automatic-v">
-      <label for="insurance-v">Insurance</label>
-      <input type="checkbox" name="insurance" id="insurance-v">
-      <label for="vertical-spinner" class="ui-controlgroup-label"># of cars</label>
-      <input id="vertical-spinner" class="ui-spinner-input">
-      <button id="book">Book Now!</button>
-    </div>
-  </fieldset>
-</div>
+      <div class="scene1">
+          <table border="1" class="film1">
+              <tr>
+                  <th>
+                    Mercedes-Benz Vario
+                  </th>
+              </tr>
+              <tr>
+                  <td>
+                      <img width="400" src="https://img.favcars.com/mercedes-benz/vario/mercedes-benz_vario_1996_pictures_2_b.jpg" alt="">
+                      <img width="400" src="https://img.favcars.com/mercedes-benz/vario/pictures_mercedes-benz_vario_1998_1_b.jpg" alt="">
+                      <img width="400" src="https://img.favcars.com/mercedes-benz/vario/wallpapers_mercedes-benz_vario_1996_2_b.jpg" alt="">
+                  </td>
+              </tr>
+              <tr>
+                  <td>The Mercedes-Benz Vario (model designation BM667/668/670) is a full-size commercial heavy van manufactured by Mercedes-Benz between 1996 and 2013.</td>
+              </tr>
+              <tr>
+                  <td>
+                    <div id="slider1"></div>
+                    <b style="color: #4B0082">Оценка: <span id="result1" style="color: #4B0082"></span></b>
+                    <div id="slider-range">
+                        <input type="text" id="min" value="1">
+                        <input type="text" id="max" value="10">
+                    </div>
+                  </td>
+              </tr>
+          </table>
+      </div>
+
+      <div class="scene2">
+          <table border="1" class="film1">
+              <tr>
+                  <th>
+                    Mercedes-Benz Sprinter
+                  </th>
+              </tr>
+              <tr>
+                  <td>
+                      <img width="400" src="https://img.favcars.com/mercedes-benz/sprinter/mercedes-benz_sprinter_1995_pictures_1_b.jpg" alt="">
+                      <img width="400" src="https://img.favcars.com/mercedes-benz/sprinter/mercedes-benz_sprinter_1995_wallpapers_3_b.jpg" alt="">
+                      <img width="400" src="https://img.favcars.com/mercedes-benz/sprinter/mercedes-benz_sprinter_1995_pictures_2_b.jpg" alt="">
+                  </td>
+              </tr>
+              <tr>
+                  <td>The Mercedes-Benz Sprinter is a light commercial vehicle (van) built by Daimler AG of Stuttgart, Germany as a large van, chassis cab, minibus, and pickup truck.</td>
+              </tr>
+              <tr>
+                  <td>
+                    <div id="slider2"></div>
+                    <b style="color: #FF1493">Оценка: <span id="result2" style="color: #FF1493"></span></b>
+                    <div id="slider-range">
+                        <input type="text" id="min" value="1">
+                        <input type="text" id="max" value="10">
+                    </div>
+                  </td>
+              </tr>
+          </table>
+      </div>
+
+      <div class="scene3">
+          <table border="1" class="film1">
+              <tr>
+                  <th>
+                    Mercedes-Benz Atego
+                  </th>
+              </tr>
+              <tr>
+                  <td>
+                      <img width="400" src="https://img.favcars.com/mercedes-benz/atego/mercedes-benz_atego_1998_pictures_15_b.jpg" alt="">
+                      <img width="400" src="https://img.favcars.com/mercedes-benz/atego/mercedes-benz_atego_1998_wallpapers_9_b.jpg" alt="">
+                      <img width="400" src="https://img.favcars.com/mercedes-benz/atego/wallpapers_mercedes-benz_atego_1998_3_b.jpg" alt="">
+                  </td>
+              </tr>
+              <tr>
+                  <td>The Mercedes-Benz Atego is a range of general-purpose rigid trucks introduced by Mercedes-Benz in 1998. A new model was introduced in 2004, followed by a facelift in 2010 and another new model in 2013.[1] The latest version is available in gross vehicle weights of 6.5 to 16 tonnes (t) and is powered by a straight 4- or 6-cylinder engine.</td>
+              </tr>
+              <tr>
+                  <td>
+                    <div id="slider3"></div>
+                    <b style="color: #00FF7F">Оценка: <span id="result3" style="color: #00FF7F"></span></b>
+                    <div id="slider-range">
+                        <input type="text" id="min" value="1">
+                        <input type="text" id="max" value="10">
+                    </div>
+                  </td>
+              </tr>
+          </table>
+      </div>
+
+      <div class="scene4">
+          <table border="1" class="film1">
+              <tr>
+                  <th>
+                    Mercedes-Benz Actros
+                  </th>
+              </tr>
+              <tr>
+                  <td>
+                      <img width="400" src="https://img.favcars.com/mercedes-benz/actros/wallpapers_mercedes-benz_actros_1997_1_b.jpg" alt="">
+                      <img width="400" src="https://img.favcars.com/mercedes-benz/actros/mercedes-benz_actros_1997_wallpapers_7_b.jpg" alt="">
+                      <img width="400" src="https://img.favcars.com/mercedes-benz/actros/pictures_mercedes-benz_actros_1997_17_b.jpg" alt="">
+                  </td>
+              </tr>
+              <tr>
+                  <td>The Mercedes-Benz Actros is a heavy-duty truck introduced by Mercedes-Benz at the 1996 Commercial Vehicle IAA in Hanover, Germany as the replacement for the SK . It is normally used for long-distance haulage, heavy duty distribution haulage and construction haulage. It is available in weights starting at 18 tonnes[citation needed] and is powered by an inline-6 diesel engine with turbocharger and intercooler.</td>
+              </tr>
+              <tr>
+                  <td>
+                    <div id="slider4"></div>
+                    <b style="color: #FFA07A">Оценка: <span id="result4" style="color: #FFA07A"></span></b>
+                    <div id="slider-range">
+                        <input type="text" id="min" value="1">
+                        <input type="text" id="max" value="10">
+                    </div>
+                  </td>
+              </tr>
+          </table>
+      </div>
 
 </body>
 </html>
+
